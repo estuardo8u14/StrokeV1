@@ -1,0 +1,13 @@
+.back {
+  background: transparent;
+  border-color: transparent;
+  width: 20rem;
+  height: 2rem;
+}
+.signout {
+  color: rgb(122, 32, 173);
+  padding: 10px;
+}
+.signout:hover {
+  color: orange;
+}
