@@ -2,7 +2,7 @@
 
 ## Para correr el programa
 En el directorio del proyecto, puede ejecutar:
-- "npm i"
+### `npm install`
 Seguido de:
 ### `npm start`
 
