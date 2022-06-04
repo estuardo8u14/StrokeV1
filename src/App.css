@@ -3,8 +3,6 @@
 }
 
 .App-logo {
-  height: 0;
-  pointer-events: none;
   filter: brightness(0) invert(1);
 }
 

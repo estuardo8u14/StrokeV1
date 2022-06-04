@@ -4,6 +4,7 @@
   border: 1px solid #dcdcdc;
   padding: 20px;
   text-align: center;
+  z-index: 1;
 }
 h1 {
   color: #dcdcdc;

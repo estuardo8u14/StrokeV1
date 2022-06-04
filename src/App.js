@@ -16,6 +16,8 @@ import PrivateRoute from "./Auth/PrivateRoute";
 import { Navigate } from "react-router-dom";
 import Home from "./Home/Home";
 import Lista from "./Dashboard/Lista";
+import Landing from "./Landing/Landing";
+import Abcd from "./Scores/ABCD/Abcd";
 
 const App = () => {
   const [questions] = useState(data);
@@ -31,9 +33,17 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App-logo">
-        <img src={logo} alt="My logo" />
+      <div>
+        <a
+          className="App-logo"
+          href="/Landing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img src={logo} alt="Stroke Logo" />
+        </a>
       </div>
+
       <AuthProvider value={{ currentUser, timeActive, setTimeActive }}>
         <Routes>
           <Route
@@ -61,8 +71,13 @@ const App = () => {
                   </div>
                 </main>
                 <button className="signout">
-                  <span onClick={() => signOut(auth)}>Sign Out</span>
+                  <span onClick={() => signOut(auth)}>Cerrar sesión</span>
                 </button>
+                <>
+                  <button className="signout">
+                    <span onClick={""}>Atrás</span>
+                  </button>
+                </>
               </PrivateRoute>
             }
           />
@@ -90,6 +105,8 @@ const App = () => {
           <Route path="/verify-email" element={<VerifyEmail />} />
           <Route path="/home" element={<Home />} />
           <Route path="/lista" element={<Lista />} />
+          <Route path="/Landing" element={<Landing />} />
+          <Route path="/ABCD" element={<Abcd />} />
         </Routes>
       </AuthProvider>
     </Router>

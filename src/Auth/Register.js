@@ -7,6 +7,7 @@ import {
   sendEmailVerification,
 } from "firebase/auth";
 import { useAuthValue } from "./AuthContext";
+import Particles from "../Fondo/Particles";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -49,43 +50,46 @@ function Register() {
   };
 
   return (
-    <div className="center">
-      <div className="auth">
-        <h1>Register</h1>
-        {error && <div className="auth__error">{error}</div>}
-        <form onSubmit={register} name="registration_form">
-          <input
-            type="email"
-            value={email}
-            placeholder="Enter your email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          />
+    <html>
+      <Particles />
+      <div className="center">
+        <div className="auth">
+          <h1>Register</h1>
+          {error && <div className="auth__error">{error}</div>}
+          <form onSubmit={register} name="registration_form">
+            <input
+              type="email"
+              value={email}
+              placeholder="Enter your email"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-          <input
-            type="password"
-            value={password}
-            required
-            placeholder="Enter your password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            <input
+              type="password"
+              value={password}
+              required
+              placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-          <input
-            type="password"
-            value={confirmPassword}
-            required
-            placeholder="Confirm password"
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+            <input
+              type="password"
+              value={confirmPassword}
+              required
+              placeholder="Confirm password"
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
 
-          <button type="submit">Register</button>
-        </form>
-        <p>
-          Already have an account? &nbsp;
-          <Link to="/login">Login</Link>
-        </p>
+            <button type="submit">Register</button>
+          </form>
+          <p>
+            Already have an account? &nbsp;
+            <Link to="/login">Login</Link>
+          </p>
+        </div>
       </div>
-    </div>
+    </html>
   );
 }
 

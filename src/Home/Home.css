@@ -23,15 +23,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .centro {
   width: 180px;
-  height: 60px;
+  height: 200px;
   position: absolute;
 }
 
 .btn {
+  width: 180px;
+  height: 200px;
+  cursor: pointer;
+  background: #242020;
+  border: 0px solid #91c9ff;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+.btn1 {
   width: 180px;
   height: 60px;
   cursor: pointer;
@@ -47,12 +58,17 @@ svg {
   top: 0;
   fill: none;
   stroke: #fff;
-  stroke-dasharray: 350 580;
+  stroke-dasharray: 500 580;
   stroke-dashoffset: 150;
   transition: 1s ease-in-out;
 }
 
 .btn:hover {
+  transition: 0s ease-in-out;
+  background: #11cec4;
+}
+
+.btn1:hover {
   transition: 0s ease-in-out;
   background: #11cec4;
 }
@@ -68,6 +84,17 @@ svg {
   transition: ease-in #0000;
 }
 
+.btn1 span {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-weight: 100;
+  transition: ease-in #0000;
+}
+
 .btn span:hover {
+  color: black;
+}
+
+.btn1 span:hover {
   color: black;
 }

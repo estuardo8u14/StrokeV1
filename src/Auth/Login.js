@@ -8,6 +8,7 @@ import {
 import { auth } from "./firebase";
 import { useNavigate } from "react-router-dom";
 import { useAuthValue } from "./AuthContext";
+import Particles from "../Fondo/Particles";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -35,37 +36,40 @@ function Login() {
   };
 
   return (
-    <div className="center">
-      <div className="auth">
-        <h1>Log in</h1>
-        {error && <div className="auth__error">{error}</div>}
-        <form onSubmit={login} name="login_form">
-          <input
-            type="email"
-            value={email}
-            required
-            placeholder="Enter your email"
-            onChange={(e) => setEmail(e.target.value)}
-          />
+    <html>
+      <Particles />
+      <div className="center">
+        <div className="auth">
+          <h1>Log in</h1>
+          {error && <div className="auth__error">{error}</div>}
+          <form onSubmit={login} name="login_form">
+            <input
+              type="email"
+              value={email}
+              required
+              placeholder="Enter your email"
+              onChange={(e) => setEmail(e.target.value)}
+            />
 
-          <input
-            type="password"
-            value={password}
-            required
-            placeholder="Enter your password"
-            onChange={(e) => setPassword(e.target.value)}
-          />
+            <input
+              type="password"
+              value={password}
+              required
+              placeholder="Enter your password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
 
-          <button type="submit">Login</button>
-        </form>
-        <p>
-          Don't have and account? &nbsp;
-          <Link color="white" to="/register">
-            Create one here
-          </Link>
-        </p>
+            <button type="submit">Login</button>
+          </form>
+          <p>
+            Don't have and account? &nbsp;
+            <Link color="white" to="/register">
+              Create one here
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
+    </html>
   );
 }
 

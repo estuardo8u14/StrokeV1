@@ -1,4 +1,5 @@
 import React from "react";
+import Particles from "../Fondo/Particles";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +16,7 @@ export default function Home() {
 
   return (
     <html>
+      <Particles />
       <div class="row">
         <div class="column">
           <div className="contenedor">
@@ -22,16 +24,16 @@ export default function Home() {
               <button className="btn" onClick={routeChange}>
                 <svg
                   width="180px"
-                  height="60px"
-                  viewBox="0 0 180 60"
+                  height="200px"
+                  viewBox="0 0 180 200"
                   class="border"
                 >
                   <polyline
-                    points="179,1 179,59 1,59 1,1 179,1"
+                    points="179,1 179,199 1,199 1,1 179,1"
                     class="bg-line"
                   />
                   <polyline
-                    points="179,1 179,59 1,59 1,1 179,1"
+                    points="179,1 179,199 1,199 1,1 179,1"
                     class="hl-line"
                   />
                 </svg>
@@ -46,16 +48,16 @@ export default function Home() {
               <button className="btn" onClick={lista}>
                 <svg
                   width="180px"
-                  height="60px"
-                  viewBox="0 0 180 60"
+                  height="200px"
+                  viewBox="0 0 180 200"
                   class="border"
                 >
                   <polyline
-                    points="179,1 179,59 1,59 1,1 179,1"
+                    points="179,1 179,199 1,199 1,1 179,1"
                     class="bg-line"
                   />
                   <polyline
-                    points="179,1 179,59 1,59 1,1 179,1"
+                    points="179,1 179,199 1,199 1,1 179,1"
                     class="hl-line"
                   />
                 </svg>
