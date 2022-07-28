@@ -2,7 +2,7 @@ import * as React from "react";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 
-export default function ColorToggleButton() {
+export default function ColorToggleButton1() {
   const [alignment, setAlignment] = React.useState("web");
 
   const handleChange = (event, newAlignment) => {
@@ -16,8 +16,11 @@ export default function ColorToggleButton() {
       exclusive
       onChange={handleChange}
     >
-      <ToggleButton value="noEdad">No (0)</ToggleButton>
-      <ToggleButton value="siEdad">Si (+1)</ToggleButton>
+      <ToggleButton value="paresia">Paresia Unilateral</ToggleButton>
+      <ToggleButton value="sin">
+        Alteración de lenguaje sin paresia
+      </ToggleButton>
+      <ToggleButton value="ninguna">Ninguna</ToggleButton>
     </ToggleButtonGroup>
   );
 }

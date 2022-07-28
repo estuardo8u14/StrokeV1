@@ -1,9 +1,47 @@
 // import TextField from "@material-ui/core/TextField";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import InputLabel from "@mui/material/InputLabel";
+import * as React from "react";
 import FormHelperText from "@mui/material/FormHelperText";
+import RadioGroup from "@mui/material/RadioGroup";
+import FormControl from "@mui/material/FormControl";
+import FormLabel from "@mui/material/FormLabel";
+import ColorToggleButton from "../Scores/ABCD/Abcd";
+import ColorToggleButton1 from "../Scores/ABCD/Abcd1";
+import ColorToggleButton2 from "../Scores/ABCD/Abcd2";
+import OutlinedButtons from "../Scores/ABCD/Abcdbutt";
+import OutlinedButtons1 from "../Scores/NIHHS/Nihhsbutt";
+import OutlinedButtons2 from "../Scores/DRAGON/Dragonbutt";
+import OutlinedButtons3 from "../Scores/HAT/Hatbutt";
+import OutlinedButtons4 from "../Scores/SEDAN/Sedanbutt";
+import Nihhs1 from "../Scores/NIHHS/Nihhs1";
+import Nihhs2 from "../Scores/NIHHS/Nihhs2";
+import Nihhs3 from "../Scores/NIHHS/Nihhs1";
+import Nihhs4 from "../Scores/NIHHS/Nihhs2";
+import Nihhs5 from "../Scores/NIHHS/Nihhs1";
+import Nihhs6 from "../Scores/NIHHS/Nihhs2";
+import Nihhs7 from "../Scores/NIHHS/Nihhs1";
+import Nihhs8 from "../Scores/NIHHS/Nihhs2";
+import Nihhs9 from "../Scores/NIHHS/Nihhs1";
+import Nihhs10 from "../Scores/NIHHS/Nihhs2";
+import Nihhs11 from "../Scores/NIHHS/Nihhs1";
+import Nihhs12 from "../Scores/NIHHS/Nihhs2";
+import Nihhs13 from "../Scores/NIHHS/Nihhs1";
+import Nihhs14 from "../Scores/NIHHS/Nihhs2";
+import Nihhs15 from "../Scores/NIHHS/Nihhs1";
+import Aspects from "../Scores/ASPECTS/Aspects";
+import Dragon from "../Scores/DRAGON/Dragon";
+import Dragon1 from "../Scores/DRAGON/Dragon1";
+import Dragon2 from "../Scores/DRAGON/Dragon2";
+import Dragon3 from "../Scores/DRAGON/Dragon3";
+import Dragon4 from "../Scores/DRAGON/Dragon4";
+import Dragon5 from "../Scores/DRAGON/Dragon5";
+import Hat from "../Scores/HAT/Hat";
+import Hat1 from "../Scores/HAT/Hat1";
+import Hat2 from "../Scores/HAT/Hat2";
+import Sedan from "../Scores/SEDAN/Sedan";
+import Sedan1 from "../Scores/SEDAN/Sedan1";
+import Sedan2 from "../Scores/SEDAN/Sedan2";
+import Sedan3 from "../Scores/SEDAN/Sedan3";
+import Sedan4 from "../Scores/SEDAN/Sedan4";
 
 const questions = [
   {
@@ -11,91 +49,74 @@ const questions = [
     title: "ABCD",
     info: (
       <form>
-        {/* A */}
-        <FormControl sx={{ m: 1, minWidth: "100%" }} size="small">
-          <InputLabel id="demo-select-small">Edad ≥ 60 años (Age)</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="Edad ≥ 60 años (Age)
-            "
-            //onChange={handleChange}
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Edad ≥ 60 años
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
           >
-            <MenuItem value={0}>0 = edad ≤ 60</MenuItem>
-            <MenuItem value={1}>1 = edad ≥ 60</MenuItem>
-          </Select>
+            <ColorToggleButton></ColorToggleButton>
+          </RadioGroup>
         </FormControl>
-        <br />
-        {/* B */}
-        <FormControl sx={{ m: 1, minWidth: "100%" }} size="small">
-          <InputLabel id="demo-select-small">
-            Presión arterial ≥ 40/90 (Blood Pressure)
-          </InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="Presión arterial ≥ 40/90 (Blood Pressure)"
-            //onChange={handleChange}
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Presión Arterial ≥ 140/90 mmHg
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
           >
-            <MenuItem value={0}>Presión arterial ≤ 40/90</MenuItem>
-            <MenuItem value={1}>Presión arterial ≥ 40/90</MenuItem>
-          </Select>
+            <ColorToggleButton></ColorToggleButton>
+          </RadioGroup>
         </FormControl>
-        <br />
-        {/* C */}
-        <FormControl sx={{ m: 1, minWidth: "100%" }} size="small">
-          <InputLabel id="demo-select-small">
-            Maniferstaciones Clínicas (C)
-          </InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="Maniferstaciones Clínicas (C)"
-            //onChange={handleChange}
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-radio-buttons-group-label">
+            Manifestaciones Clínicas
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
           >
-            <MenuItem value={0}>Ninguna</MenuItem>
-            <MenuItem value={1}>1 = Alteración lenguaje sin paresia</MenuItem>
-            <MenuItem value={2}>2 = Paresia unilateral</MenuItem>
-          </Select>
+            <ColorToggleButton1></ColorToggleButton1>
+          </RadioGroup>
         </FormControl>
-        <br />
-        {/* D */}
-        <FormControl sx={{ m: 1, minWidth: "100%" }} size="small">
-          <InputLabel id="demo-select-small">Duración</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="Duración
-            "
-            //onChange={handleChange}
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-radio-buttons-group-label">
+            Duración de sintomas
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
           >
-            <MenuItem value={1}>1 = 10-59 mins</MenuItem>
-            <MenuItem value={2}>1 = edad ≥ 60 mins</MenuItem>
-          </Select>
+            <ColorToggleButton2></ColorToggleButton2>
+          </RadioGroup>
         </FormControl>
-        <br />
-        {/* D2 */}
-        <FormControl sx={{ m: 1, minWidth: "100%" }} size="small">
-          <InputLabel id="demo-select-small">Diabetes Mellitus</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="Diabetes Mellitus
-            "
-            //onChange={handleChange}
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Historia de diabetes
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
           >
-            <MenuItem value={0}>0 = No presente</MenuItem>
-            <MenuItem value={1}>1 = presente</MenuItem>
-          </Select>
+            <ColorToggleButton></ColorToggleButton>
+          </RadioGroup>
         </FormControl>
-        <br />
-        {/* <input type="submit" value="Enviar" /> */}
-        <button href="http://localhost:3000/ABCD">Enviar</button>
+        <br></br>
+        <br></br>
+        <OutlinedButtons></OutlinedButtons>
       </form>
     ),
   },
@@ -106,39 +127,18 @@ const questions = [
       <form>
         {/* 1A */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">
+          <FormLabel id="demo-row-radio-buttons-group-label">
             1A. Nivel de Conciencia
-          </InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="1A. Nivel de Conciencia*"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Aleta</MenuItem>
-            <MenuItem value={1}>1 = Somnolencia</MenuItem>
-            <MenuItem value={2}>2 = Estupor</MenuItem>
-            <MenuItem value={3}>3 = Coma</MenuItem>
-          </Select>
+          </FormLabel>
+          <Nihhs1></Nihhs1>
         </FormControl>
         <br />
         {/* 1B */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">
+          <FormLabel id="demo-row-radio-buttons-group-label">
             1B. Nivel de Conciencia (preguntas)
-          </InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="Nivel de Conciencia (preguntas) *"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Ambas Correctas</MenuItem>
-            <MenuItem value={1}>1 = Una Correcta</MenuItem>
-            <MenuItem value={2}>2 = Ambas Incorrectas</MenuItem>
-          </Select>
+          </FormLabel>
+          <Nihhs2></Nihhs2>
           <FormHelperText>
             Requerido (se pregunta el mes actual y la edad del paciente)
           </FormHelperText>
@@ -146,20 +146,10 @@ const questions = [
         <br />
         {/* 1C */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">
+          <FormLabel id="demo-row-radio-buttons-group-label">
             1C. Nivel de Conciencia (órdenes)
-          </InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="1C. Nivel de Conciencia (órdenes)*"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Responde Ambas</MenuItem>
-            <MenuItem value={1}>1 = Responde Una</MenuItem>
-            <MenuItem value={2}>2 = No Responde</MenuItem>
-          </Select>
+          </FormLabel>
+          <Nihhs3></Nihhs3>
           <FormHelperText>
             Requerido (Ordenes: abrir y cerrar los ojos y empuñar la mano no
             protética)
@@ -168,71 +158,35 @@ const questions = [
         <br />
         {/* 2 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">2. Mirada Conjugada</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="2. Mirada Conjugada"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Parálisis parcial</MenuItem>
-            <MenuItem value={2}>2 = Desviación forzada</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            2. Mirada Conjugada
+          </FormLabel>
+          <Nihhs4></Nihhs4>
         </FormControl>
         <br />
         {/* 3 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">3. Campos Visuales</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="3. Campos Visuales"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Hemianopsia parcial</MenuItem>
-            <MenuItem value={2}>2 = Hemianopsia completa</MenuItem>
-            <MenuItem value={3}> 3 = Hemianospia bilateral</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            3. Campos Visuales
+          </FormLabel>
+          <Nihhs5></Nihhs5>
         </FormControl>
         <br />
         {/* 4 */}
         {/* 3 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">4. Paresia Facial</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="4. Paresia Facial"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Asimetría menor</MenuItem>
-            <MenuItem value={2}>2 = Paresia parcial (central)</MenuItem>
-            <MenuItem value={3}> 3 = Parálisis completa</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            4. Paresia Facial
+          </FormLabel>
+          <Nihhs6></Nihhs6>
         </FormControl>
         <br />
         {/* 5 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">5. Motor MS-Der.</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="5. Motor MS-Der."
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Desviación del miembro</MenuItem>
-            <MenuItem value={2}>2 = Algún esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={3}>3 = Sin esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={4}>4 = Sin movimiento</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            5. Motor MS-Der.
+          </FormLabel>
+          <Nihhs7></Nihhs7>
           <FormHelperText>
             Igual al siguente (Prueba con brazos extendidos a 90° durante 10
             segundos)
@@ -241,20 +195,10 @@ const questions = [
         <br />
         {/* 6 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">6. Motor MS-Izq.</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="6. Motor MS-IZQ."
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Desviación del miembro</MenuItem>
-            <MenuItem value={2}>2 = Algún esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={3}>3 = Sin esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={4}>4 = Sin movimiento</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            6. Motor MS-Izq.
+          </FormLabel>
+          <Nihhs8></Nihhs8>
           <FormHelperText>
             Igual al anterior (Prueba con brazos extendidos a 90° durante 10
             segundos)
@@ -263,20 +207,10 @@ const questions = [
         <br />
         {/* 7 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">7. Motor MI-Der.</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="7. Motor MI-Der."
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Desviación del miembro</MenuItem>
-            <MenuItem value={2}>2 = Algún esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={3}>3 = Sin esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={4}>4 = Sin movimiento</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            7. Motor MI-Der.
+          </FormLabel>
+          <Nihhs9></Nihhs9>
           <FormHelperText>
             Igual al siguente (Prueba con pierna extendida a 30° durante 5
             segundos)
@@ -285,20 +219,10 @@ const questions = [
         <br />
         {/* 8 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">8. Motor MI-IZQ</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="8. Motor MI-IZQ"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Desviación del miembro</MenuItem>
-            <MenuItem value={2}>2 = Algún esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={3}>3 = Sin esfuerzo vs gravedad</MenuItem>
-            <MenuItem value={4}>4 = Sin movimiento</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            8. Motor MI-IZQ
+          </FormLabel>
+          <Nihhs10></Nihhs10>
           <FormHelperText>
             Igual al anterior (Prueba con pierna extendida a 30° durante 5
             segundos)
@@ -307,113 +231,269 @@ const questions = [
         <br />
         {/* 9 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">9. Ataxia</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="9. Ataxia"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Ausente</MenuItem>
-            <MenuItem value={1}>1 = Presente en una extremidad</MenuItem>
-            <MenuItem value={2}>2 = Presente en 2 o más extremidades</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            9. Ataxia
+          </FormLabel>
+          <Nihhs11></Nihhs11>
         </FormControl>
         <br />
         {/* 10 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">10. Sensibilidad</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="10. Sensibilidad"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Ausente</MenuItem>
-            <MenuItem value={1}>1 = Pérdida parcial, leve</MenuItem>
-            <MenuItem value={2}>2 = Pérdida densa</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            10. Sensibilidad
+          </FormLabel>
+          <Nihhs12></Nihhs12>
         </FormControl>
         <br />
         {/* 11 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">11. Lenguaje</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="11. Lenguaje
-"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Normal</MenuItem>
-            <MenuItem value={1}>1 = Afasia leve a moderada</MenuItem>
-            <MenuItem value={2}>2 = Afasia severa</MenuItem>
-            <MenuItem value={3}>3 = Mutismo</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            11. Lenguaje
+          </FormLabel>
+          <Nihhs13></Nihhs13>
         </FormControl>
         <br />
 
         {/* 12 */}
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">12. Disartria</InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="12. Disartria"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Articulación Normal</MenuItem>
-            <MenuItem value={1}>1 = Disartria leve a moderada</MenuItem>
-            <MenuItem value={2}>2 = Ininteligible</MenuItem>
-          </Select>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            12. Disartria
+          </FormLabel>
+          <Nihhs14></Nihhs14>
         </FormControl>
         <br />
         {/* 13 */}
 
         <FormControl sx={{ m: 1, minWidth: "100%" }} size="medium">
-          <InputLabel id="demo-select-small">
+          <FormLabel id="demo-row-radio-buttons-group-label">
             13. Extinción (Inatención) Negligencia
-          </InputLabel>
-          <Select
-            labelId="demo-select-small"
-            id="demo-select-small"
-            //value={age}
-            label="13. Extinción (Inatención) Negligencia"
-            //onChange={handleChange}
-          >
-            <MenuItem value={0}>0 = Ausente</MenuItem>
-            <MenuItem value={1}>1 = Parcial</MenuItem>
-            <MenuItem value={2}>2 = Completa</MenuItem>
-          </Select>
+          </FormLabel>
+          <Nihhs15></Nihhs15>
         </FormControl>
         <br />
         {/* <button onClick={routeChange}></button> */}
+        <OutlinedButtons1></OutlinedButtons1>
       </form>
     ),
   },
   {
     id: 3,
     title: "ASPECTS",
-    info: "",
+    info: (
+      <form>
+        <Aspects></Aspects>
+      </form>
+    ),
   },
   {
     id: 4,
     title: "DRAGON",
-    info: "",
+    info: (
+      <form>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            HyperDense Cerebral Artery / Early Infarct on CT
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Dragon></Dragon>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Modified Rankin Scale menor que 1, prestroke
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Dragon1></Dragon1>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-radio-buttons-group-label">Age</FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
+          >
+            <Dragon2></Dragon2>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-radio-buttons-group-label">
+            Glucose at Baselin menor que 144 mg/dL (8 mmol/L)
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
+          >
+            <Dragon3></Dragon3>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Onset of Treatment mayor 90 minutes
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Dragon4></Dragon4>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Baseline NIH Stroke Scale
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Dragon5></Dragon5>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <OutlinedButtons2></OutlinedButtons2>
+      </form>
+    ),
   },
   {
     id: 5,
     title: "HAT",
-    info: "",
+    info: (
+      <form>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            History of diabetes or initial glucose MAYOR QUE 200 mg/dL
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Hat></Hat>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Modified Rankin Scale menor que 1, prestroke
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Hat1></Hat1>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-radio-buttons-group-label">Age</FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
+          >
+            <Hat2></Hat2>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <OutlinedButtons3></OutlinedButtons3>
+      </form>
+    ),
   },
   {
     id: 6,
     title: "SEDAN",
-    info: "",
+    info: (
+      <form>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Blood sugar
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Sedan></Sedan>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Early infarct signs on initial CT
+          </FormLabel>
+          <RadioGroup
+            row
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Sedan1></Sedan1>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-radio-buttons-group-label">
+            Hyperdense cerebral artery sign on initial CT
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-radio-buttons-group-label"
+            name="radio-buttons-group"
+          >
+            <Sedan2></Sedan2>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            Age mayor que 75 years
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Sedan3></Sedan3>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <FormControl>
+          <FormLabel id="demo-row-radio-buttons-group-label">
+            NIH Stroke Scale (NIHSS) mayor que 10
+          </FormLabel>
+          <RadioGroup
+            aria-labelledby="demo-row-radio-buttons-group-label"
+            name="row-radio-buttons-group"
+          >
+            <Sedan4></Sedan4>
+          </RadioGroup>
+        </FormControl>
+        <br></br>
+        <br></br>
+        <OutlinedButtons4></OutlinedButtons4>
+      </form>
+    ),
   },
 ];
 export default questions;

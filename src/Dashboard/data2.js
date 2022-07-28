@@ -104,6 +104,8 @@ const pacientes = [
           margin="normal"
           fullWidth
         />
+        <br></br>
+        <input type="submit" value="Submit" />
       </form>
     ),
   },
