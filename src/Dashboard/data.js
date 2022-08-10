@@ -28,6 +28,7 @@ import Nihhs13 from "../Scores/NIHHS/Nihhs1";
 import Nihhs14 from "../Scores/NIHHS/Nihhs2";
 import Nihhs15 from "../Scores/NIHHS/Nihhs1";
 import Aspects from "../Scores/ASPECTS/Aspects";
+//import AspectsPrueba from "../Scores/ASPECTS/AspectsPrueba"; //
 import Dragon from "../Scores/DRAGON/Dragon";
 import Dragon1 from "../Scores/DRAGON/Dragon1";
 import Dragon2 from "../Scores/DRAGON/Dragon2";
@@ -42,6 +43,7 @@ import Sedan1 from "../Scores/SEDAN/Sedan1";
 import Sedan2 from "../Scores/SEDAN/Sedan2";
 import Sedan3 from "../Scores/SEDAN/Sedan3";
 import Sedan4 from "../Scores/SEDAN/Sedan4";
+import { templateSettings } from "lodash";
 
 const questions = [
   {
