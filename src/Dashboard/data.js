@@ -43,7 +43,6 @@ import Sedan1 from "../Scores/SEDAN/Sedan1";
 import Sedan2 from "../Scores/SEDAN/Sedan2";
 import Sedan3 from "../Scores/SEDAN/Sedan3";
 import Sedan4 from "../Scores/SEDAN/Sedan4";
-import { templateSettings } from "lodash";
 
 const questions = [
   {
