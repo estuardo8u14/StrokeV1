@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import logo from "./img/stroke1.png";
-import data from "./Dashboard/data";
-import data2 from "./Dashboard/data2";
-import SingleQuestion from "./Dashboard/Question";
+//import data from "./Dashboard/data";
+// import data2 from "./Dashboard/data2";
+//import SingleQuestion from "./Dashboard/Question";
+import ProgressTimer from "react-progress-bar-timer";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Register from "./Auth/Register";
@@ -18,13 +19,31 @@ import Home from "./Home/Home";
 import Lista from "./Dashboard/Lista";
 import Landing from "./Landing/Landing";
 import Abcd from "./Scores/ABCD/Abcd";
+import Datasetone from "./Dashboard/Datasetone";
+import Glucometro from "./Dashboard/Glucometro";
+import Presion from "./Dashboard/Presion";
+import Abcdsection from "./Dashboard/Abcdsection";
+import Nihhssec from "./Dashboard/Nihhssec";
 
 const App = () => {
-  const [questions] = useState(data);
-  const [pacientes] = useState(data2);
+  //const [questions] = useState(data);
+  // const [pacientes] = useState(data2);
   const [currentUser, setCurrentUser] = useState(null);
   const [timeActive, setTimeActive] = useState(false);
+  let name = "Please Login";
+  if (currentUser?.emailVerified) {
+    const { email } = auth.currentUser;
+    name = email.split("@");
+    name = name[0];
+  }
 
+  window.onload = () => {
+    if (localStorage.getItem("timeIdUser")) {
+      alert("Session Timeout");
+      localStorage.removeItem("timeIdUser");
+      localStorage.removeItem("Id2User");
+    }
+  };
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
@@ -42,6 +61,10 @@ const App = () => {
         >
           <img src={logo} alt="Stroke Logo" />
         </a>
+        <p className="username">
+          Bienvenido, <b>{name}</b>
+        </p>
+        <br></br>
       </div>
 
       <AuthProvider value={{ currentUser, timeActive, setTimeActive }}>
@@ -51,22 +74,39 @@ const App = () => {
             path="/"
             element={
               <PrivateRoute>
+                <ProgressTimer
+                  buttonText="Empezar Tiempo"
+                  classes={{}}
+                  color="hsla(248, 34%, 52%, 0.81)"
+                  direction="right"
+                  duration={3600}
+                  fontColor=""
+                  fontSize="1em"
+                  label="Tiempo"
+                  onFinish={function noRefCheck() {}}
+                  rootRounded
+                  variant="fill"
+                />
                 <div className="container">
                   <h3>Info. Paciente</h3>
                   <section className="info">
-                    {pacientes.map((paciente) => (
+                    {/* {pacientes.map((paciente) => (
                       <SingleQuestion key={paciente.id} {...paciente} />
-                    ))}
+                    ))} */}
+                    <Datasetone />
+                    <Glucometro />
+                    <Presion />
                   </section>
-                  <h4>Paciente: Juan Lopez Rodriguez</h4>
+                  <h4></h4>
                 </div>
                 <main>
                   <div className="container">
-                    <h3>Marcar Respuestas para obtener resultados</h3>
+                    <h3>
+                      CÓDIGO RESCATE<sup>6</sup>
+                    </h3>
                     <section className="info">
-                      {questions.map((question) => (
-                        <SingleQuestion key={question.id} {...question} />
-                      ))}
+                      <Abcdsection />
+                      <Nihhssec />
                     </section>
                   </div>
                 </main>
@@ -75,7 +115,7 @@ const App = () => {
                 </button>
                 <>
                   <button className="signout">
-                    <span onClick={""}>Atrás</span>
+                    <span href="">Atrás</span>
                   </button>
                 </>
               </PrivateRoute>

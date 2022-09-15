@@ -1,0 +1,92 @@
+const [numRegistro, setnumRegistro] = useState("");
+const [edadPaciente, setedadPaciente] = useState("");
+const [Nombre, setNombre] = useState("");
+const [UltimaHora, setUltimaHora] = useState("");
+const [EntradaHora, setEntradaHora] = useState("");
+const [ictusDespertar, setictusDespertar] = useState("");
+const [ictusHospital, setictusHospital] = useState("");
+const [transportePaciente, settransportePaciente] = useState("");
+const [antecedentesTratamiento, setantecedentesTratamiento] = useState("");
+const [lugarIngresado, setlugarIngresado] = useState("");
+const [glucosaPrimera, setglucosaPrimera] = useState("");
+const [colesterolPrimera, csetolesterolPrimera] = useState("");
+const [presionPrimera, setpresionPrimera] = useState("");
+const [escalaGlasgow, setescalaGlasgow] = useState("");
+const [mRSantesIctus, setmRSantesIctus] = useState("");
+const [INRPrimera, setINRPrimera] = useState("");
+const [covidPositivo, setcovidPositivo] = useState("");
+//const [imagenesCerebrales, ] = useState("");
+const [infartosAntiguos, setinfartosAntiguos] = useState("");
+const [tipoIctus, settipoIctus] = useState("");
+const [oclusionATMARM, setoclusionATMARM] = useState("");
+const [oclusionUbicacion, setoclusionUbicacion] = useState("");
+const [trombolisisIntra, settrombolisisIntra] = useState("");
+const [pacieteVentilado, setpacieteVentilado] = useState("");
+const [craniectomiaDescom, setcraniectomiaDescom] = useState("");
+const [diagnosticoSiete, setdiagnosticoSiete] = useState("");
+const [estenosisCS, setestenosisCS] = useState("");
+const [etiologiaCausaIctus, setetiologiaCausaIctus] = useState("");
+const [intervencionesTEV, setintervencionesTEV] = useState("");
+const [ComplicacionesPostIctus, setComplicacionesPostIctus] = useState("");
+const [TCRMPostTx, setTCRMPostTx] = useState("");
+const [ResultadosTACRMNPostTx, setResultadosTACRMNPostTx] = useState("");
+const [consultaFisio, setconsultaFisio] = useState("");
+const [destinoAlta, setdestinoAlta] = useState("");
+const [fechaAlta, setfechaAlta] = useState("");
+const [TxPreAlta, setTxPreAlta] = useState("");
+const [fechaSeguimiento, setfechaSeguimiento] = useState("");
+const [perfilLipidico, setperfilLipidico] = useState("");
+const [perfilTiroideo, setperfilTiroideo] = useState("");
+const [hemoGlicosilada, sethemoGlicosilada] = useState("");
+const [IdContraRMNCerebral, setIdContraRMNCerebral] = useState("");
+
+const myData = {
+  numRegistro: numRegistro,
+  EdadPaciente: EdadPaciente,
+  sexoPaciente: sexoPaciente,
+  Nombre: Nombre,
+  UltimaHora: UltimaHora,
+  EntradaHora: EntradaHora,
+  ictusDespertar: ictusDespertar,
+  ictusHospital: ictusHospital,
+  transportePaciente: transportePaciente,
+  antecedentesTratamiento: antecedentesTratamiento,
+  lugarIngresado: lugarIngresado,
+  glucosaPrimera: glucosaPrimera,
+  colesterolPrimera: colesterolPrimera,
+  presionPrimera: presionPrimera,
+  NIHHS: {},
+  escalaGlasgow: escalaGlasgow,
+  mRSantesIctus: mRSantesIctus,
+  INRPrimera: INRPrimera,
+  covidPositivo: covidPositivo,
+  //imagenesCerebrales: imagenesCerebrales,
+  infartosAntiguos: infartosAntiguos,
+  tipoIctus: tipoIctus,
+  oclusionATMARM: oclusionATMARM,
+  oclusionUbicacion: oclusionUbicacion,
+  trombolisisIntra: trombolisisIntra,
+  pacieteVentilado: pacieteVentilado,
+  craniectomiaDescom: craniectomiaDescom,
+  diagnosticoSiete: diagnosticoSiete,
+  estenosisCS: estenosisCS,
+  etiologiaCausaIctus: etiologiaCausaIctus,
+  intervencionesTEV: intervencionesTEV,
+  ComplicacionesPostIctus: ComplicacionesPostIctus,
+  TCRMPostTx: TCRMPostTx,
+  ResultadosTACRMNPostTx: ResultadosTACRMNPostTx,
+  consultaFisio: consultaFisio,
+  destinoAlta: destinoAlta,
+  fechaAlta: fechaAlta,
+  NIHHS2: {},
+  TxPreAlta: TxPreAlta,
+  fechaSeguimiento: fechaSeguimiento,
+  ASPECTS: {},
+  DRAGON: {},
+  HAT: {},
+  SEDAN: {},
+  perfilLipidico: perfilLipidico,
+  perfilTiroideo: perfilTiroideo,
+  hemoGlicosilada: hemoGlicosilada,
+  IdContraRMNCerebral: IdContraRMNCerebral,
+};

@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -14,9 +15,13 @@ const firebaseConfig = {
   appId: "1:1079025209660:web:3a179f2905dfb6baa14e39",
   measurementId: "G-5P2L619JF6",
 };
+// const serviceAccount = require('./stroke-19c84-firebase-adminsdk-wntkq-c5b12889da.json');
+
+// const appser = initializeApp(projectId);
 
 // Initialize Firebase
 // Initialize Firebase and Firebase Authentication
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 const auth = getAuth(app);
-export { auth };
+export { auth, db };
